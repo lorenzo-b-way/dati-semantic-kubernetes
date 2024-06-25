@@ -1,0 +1,12 @@
+apiVersion: apps.openshift.io/v1
+kind: dati-semantic-pvc
+metadata:
+  name: wp-pv-claim
+  labels:
+    application: dati-semantic-wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
