@@ -4,10 +4,10 @@ metadata:
   name: configmap-dati-semantic-wordpress
   namespace: ndc-dev
 data:
-  WP_HOME: http://example.com
-  WP_SITEURL: http://example.com
+  WP_HOME: wp-ndc-dev.apps.cloudpub.testedev.istat.it
+  WP_SITEURL: wp-ndc-dev.apps.cloudpub.testedev.istat.it
   TABLE_PREFIX: wp_
-  WP_CONTENT_DIR: /var/www/example.com/wp-content
+  WP_CONTENT_DIR: /var/www/schema.gov.it/wp-content
   FS_METHOD: direct
   WP_DEBUG: "false"
   WP_DEBUG_LOG: "false"

@@ -65,7 +65,7 @@ spec:
               protocol: TCP
           volumeMounts:
             - name: wordpress-persistent-storage
-              mountPath: /var/www/html
+              mountPath: /var/www/schema.gov.it/wp-content
           env:
             - name: XDG_CONFIG_HOME
               value: /tmp/
@@ -79,117 +79,117 @@ spec:
             - name: WPVAR_WP_HOME
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: WP_HOME
             - name: WPVAR_WP_SITEURL
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: WP_SITEURL
             - name: WPVAR_TABLE_PREFIX
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: TABLE_PREFIX
             - name: WPVAR_WP_CONTENT_DIR
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: WP_CONTENT_DIR
             - name: WPVAR_FS_METHOD
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: FS_METHOD
             - name: WPVAR_WP_DEBUG
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: WP_DEBUG
             - name: WPVAR_WP_DEBUG_LOG
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: WP_DEBUG_LOG
             - name: WPVAR_WP_DEBUG_DISPLAY
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: WP_DEBUG_DISPLAY
             - name: WPVAR_WP_POST_REVISIONS
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: WP_POST_REVISIONS
             - name: WPVAR_DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: DB_HOST
             - name: WPVAR_DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: DB_NAME
             - name: WPVAR_DB_CHARSET
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: DB_CHARSET
             - name: WPVAR_DB_COLLATE
               valueFrom:
                 configMapKeyRef:
-                  name: dev-example-config
+                  name: configmap-dati-semantic-wordpress
                   key: DB_COLLATE
             - name: WPVAR_DB_USER
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-db-secret
+                  name: dati-semantic-wordpress-db-secret
                   key: DB_USER
             - name: WPVAR_DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-db-secret
+                  name: dati-semantic-wordpress-db-secret
                   key: DB_PASSWORD
             - name: WPVAR_AUTH_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: AUTH_KEY
             - name: WPVAR_SECURE_AUTH_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: SECURE_AUTH_KEY
             - name: WPVAR_LOGGED_IN_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: LOGGED_IN_KEY
             - name: WPVAR_NONCE_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: NONCE_KEY
             - name: WPVAR_AUTH_SALT
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: AUTH_SALT
             - name: WPVAR_SECURE_AUTH_SALT
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: SECURE_AUTH_SALT
             - name: WPVAR_LOGGED_IN_SALT
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: LOGGED_IN_SALT
             - name: WPVAR_NONCE_SALT
               valueFrom:
                 secretKeyRef:
-                  name: dev-example-wp-secret
+                  name: dati-semantic-wordpress-wp-secret
                   key: NONCE_SALT
             - name: VOLUME_MOUNT_PATH
               value: "/var/www/example.com"
