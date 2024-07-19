@@ -7,4 +7,3 @@ subsets:
       - ip: 10.242.0.5
     ports:
       - port: 9200
-
